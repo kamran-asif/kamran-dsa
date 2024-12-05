@@ -7,7 +7,7 @@ private:
                 dfs(it, adjLs, vis);
             }
         }
-
+    }
     public:
         int findCircleNum(vector<vector<int>> & isConnected) {
             int v = isConnected.size();
@@ -33,5 +33,6 @@ private:
             }
 
             return cnt;
-        }
+     
+           }   
     };
