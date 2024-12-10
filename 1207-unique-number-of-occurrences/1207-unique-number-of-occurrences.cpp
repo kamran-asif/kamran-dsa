@@ -22,3 +22,4 @@ public:// 1st approach map m dal denge occurences ko or cnt krlenge ;key m arr k
           return true;
     }
 };
+// isme hm map or set dono use krna skhgye
