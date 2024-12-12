@@ -1,5 +1,6 @@
 class Solution {
 public:
+    //sliding window imp
     int numberOfSubstrings(string s) {
       int lastseen[3]={-1,-1,-1};
       int count=0;
