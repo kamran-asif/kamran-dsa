@@ -1,5 +1,6 @@
 class Solution {
 public:
+    //tabulation approach
     int minPathSum(vector<vector<int>>& grid) {
         int n=grid.size();
         int m=grid[0].size();
