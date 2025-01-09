@@ -19,11 +19,11 @@ public:
 
         bool result = false;
         if (i < m && s1[i] == s3[k]) {// agr crrnt chrctr s1 matchs s3
-            result =solve(i + 1, j, k + 1, s1, s2, s3);
+            result = result || solve(i + 1, j, k + 1, s1, s2, s3);//yha hm ye || isly use kr rhe kyuki phle s mil chuke true ko overwrite kr dya jayega is vjh s kch valid path miss ho skte hai
         }
            // agr crrnt chrctr s2 mtchs s3 
         if (j < n && s2[j] == s3[k]) {
-            result = solve(i, j + 1, k + 1, s1, s2, s3);
+            result = result || solve(i, j + 1, k + 1, s1, s2, s3);
         }
         return t[i][j][k] = result;
     }
