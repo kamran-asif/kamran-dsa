@@ -16,7 +16,7 @@ int solve(vector<int>&locations,int i,int finish,int fuel){
     for(int j=0;j<n;j++){
         if(i!=j){
             int remaining_fuel=fuel-abs(locations[i]-locations[j]);
-            ans=ans+solve(locations,j,finish,remaining_fuel);
+            ans=(ans+solve(locations,j,finish,remaining_fuel))%MOD;
         }
       
     }
