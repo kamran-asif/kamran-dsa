@@ -1,8 +1,6 @@
-#include<bits/stdc++.h>
-using namespace std;
 
 class Solution {
-public:
+public://using min heap approach dp with pntr tle de rha ugly no variant acha swal h
     int nthSuperUglyNumber(int n, vector<int>& primes) {
         vector<int> dp(n);
         dp[0] = 1;
