@@ -1,39 +1,31 @@
 class Solution {
-
-    public :
-           int Count(long curr, long next, int n) {
-        int countNum = 0;
-
-        while(curr <= n) {
-            countNum += (next - curr);
-
-            curr *= 10;
-            next *= 10;
-
-            next = min(next, long(n+1));
-        }
-
-        return countNum;
-    }
-
+public:
     int findKthNumber(int n, int k) {
         int curr = 1;
-        k -= 1; //Since we start from the first number (1), we need k-1 more numbers
+        k--;
 
-        while(k > 0) {
-            int count = Count(curr, curr+1, n);
-            if(count  <= k) {
+        while (k > 0) {
+            int step = countSteps(n, curr, curr + 1);
+            if (step <= k) {
                 curr++;
-                k -= count; //skipping the elements under curr prefix tree
+                k -= step;
             } else {
                 curr *= 10;
-                k -= 1;
+                k--;
             }
         }
 
         return curr;
+    }
 
+private:
+    int countSteps(int n, long prefix1, long prefix2) {
+        int steps = 0;
+        while (prefix1 <= n) {
+            steps += min((long)(n + 1), prefix2) - prefix1;
+            prefix1 *= 10;
+            prefix2 *= 10;
+        }
+        return steps;
     }
 };
-
-
