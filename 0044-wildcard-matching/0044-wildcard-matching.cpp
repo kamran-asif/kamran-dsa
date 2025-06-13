@@ -1,5 +1,5 @@
 class Solution {
-public:
+public://bottom up tough h iska dhyan s
     bool isMatch(string s, string p) {
        /*  int m = s.length(), n = p.length();  
     
