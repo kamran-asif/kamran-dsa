@@ -40,7 +40,7 @@ public:
 
     int maximumRobots(vector<int>& chargeTimes, vector<int>& runningCosts, long long budget) {
         int n=chargeTimes.size();
-        int low=0,high=n,ans=0;
+        int low=1,high=n,ans=0;
         
         // binary search on window size k
         while (low<=high){
